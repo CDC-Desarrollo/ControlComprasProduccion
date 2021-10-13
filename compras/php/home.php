@@ -8,7 +8,6 @@
         $email_sesion = $_SESSION['email'];
         
         if (!isset($_SESSION['email'])) {
-            //header('location: login.php');
             header("Location: login.php");
         }
 
