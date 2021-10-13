@@ -1,29 +1,26 @@
 <?php
     require_once("conexion.php");
     $email =$_POST['email'];
-    $password = sha1($_POST['pass'])    ;
+    $password = sha1($_POST['pass']);
     $res = $conexion->query("select * from usuarios 
         where email='$email' 
         and password='$password' and
         confirmado = '1'
         ")or die($conexion->error);
     if( mysqli_num_rows($res) > 0 ){
-        
         //Se crea sesión para posteriormente hacer búsquedas en BD
         session_start();
         $_SESSION['email'] = $email;
-
         $email_sesion = $_SESSION['email'];
         
         $result = $conexion->query(" select * from usuarios where email='$email_sesion' ");
         $obj = $result->fetch_object();
         $confirmar_datos_usuario = $obj->confirmar_datos;
         $id_usuario = $obj->id;
-
         echo $confirmar_datos_usuario;
-        echo '
-                            <!DOCTYPE html>
-                    <html lang="en">
+/*         echo 
+        '<!DOCTYPE html>
+        <html lang="en">
                     <head>
                         <meta charset="UTF-8">
                         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,13 +75,12 @@
                             </nav>
                         </div>
         ';
-
-
-        if($confirmar_datos_usuario > 0)
-        {
-
+ */
+        /* if($confirmar_datos_usuario > 0)
+        { */
+            header("Location: ../home.php");
         //Información General de Cliente
-        $resultado = $conexion->query(" select * from clientes where id_usuario='$id_usuario' ");
+        /* $resultado = $conexion->query(" select * from clientes where id_usuario='$id_usuario' ");
         $obj_cliente = $resultado->fetch_object();
         $nombres_obj_cliente = $obj_cliente->nombres;
         $apellidos_obj_cliente = $obj_cliente->apellidos;
@@ -110,26 +106,14 @@
             echo $confirmar_datos_usuario;
 
 
-            echo '
+            echo 
+            '<br><br><br>
+            <!-- Masthead-->
+            <div class="container">
+            <div class="small-container3 center-block">';
             
-            <br><br><br>
-                    <!-- Masthead-->
-
-                    <div class="container">
-                    <div class="small-container3 center-block">
-
-
-            
-            ';
-
-            
-
-
-
-                    echo '
-                    
-                    
-        <div class="card text-dark bg-light mb-3 ">
+            echo 
+            '<div class="card text-dark bg-light mb-3 ">
         <div class="card-header text-center"> <b><i>Datos del Generales de: </i></b> '. $email_sesion .' | <b><i>Núm. Casillero:</i></b> CDC'.$id_usuario.'</div>
 
         <div class="row">
@@ -189,65 +173,32 @@
                 </div>
             </div>
         </div>
-    </div>
-                    
-                    
-                    
-                    ';
-
-
-
-
-
-
-        }
-        
-
+    </div>'; 
+            }
         else
-        {
+        {*/
             //Si la columna de Confirmar Datos Generales de Usuario es 0
-                    echo '
-
-
+                    /* echo '
                     <br><br><br><br><br><br>
                     <!-- Masthead-->
-
                     <div class="container">
                     <div class="small-container3 center-block">
-
-
-                        <div class="card text-dark bg-light mb-3">
-                            <div class="card-header">Datos Generales de (
-                    ';
-
-                    echo $_SESSION['email']; //Impresión de Correo Electrónico
-                    
-
-                    echo '
-                            ) 
-                            </div>
-                            
-                            <div class="card-body">
-                                <h5 class="card-title">Llena tus Datos Generales!</h5>
-                                <p class="card-text">Para poder hacer tus pre-alertas debes llenar primero tus datos generales. Haz clic en
-                                    el siguiente botón para llenarlos.</p>
-                                <div>
-                                    <a href="../datos_generales.php">
-                                        <button type="submit" class="btn btn-success">Llena tus Datos Generales</button>
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card text-dark bg-light mb-3">
+                    <div class="card-header">Datos Generales de (';echo $_SESSION['email']; echo ') 
                     </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Llena tus Datos Generales!</h5>
+                    <p class="card-text">Para poder hacer tus pre-alertas debes llenar primero tus datos generales. Haz clic en
+                    el siguiente botón para llenarlos.</p>
                     <div>
-                    ';
-        }
-        
-        
-
-
+                    <a href="../datos_generales.php"><button type="submit" class="btn btn-success">Llena tus Datos Generales</button></a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div>'; 
+        }*/
     }else{
-        header("Location: ../login/index.php");
+        header("Location: ../login.php?error=true");
     }
 ?>
