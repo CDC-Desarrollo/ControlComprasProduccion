@@ -78,19 +78,20 @@
                 <div class="col-md-6 mb-3">
                   <label for="txtPeso"> Peso en Libras (lb) *</label>
                   <input type="text" class="form-control" id="txtPeso" name="txtPeso" placeholder="8.20" value=""
-                    required>
+                  pattern="[0-9]{1,3}" title="Solo puede ingresar números" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Nombre(s)" vacío.</div>
+                  <div class="invalid-feedback">No deje el campo "Peso(s)" vacío.</div>
+
                 </div>
 
                 <div class="col-md-6 mb-3">
                   <label for="txtvalor">Valor en Dólares del Producto (dlls) *</label>
                   <input type="text" class="form-control" id="txtvalor" name="txtvalor" placeholder="730" value=""
-                  oninput="calcularPorcentajeSeguro()" required>
+                  oninput="calcularPorcentajeSeguro()" pattern="[0-9]{1,5}" title="Solo puede ingresar números" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Apellido(s)" vacío.</div>
+                  <div class="invalid-feedback">No deje el campo "Valor del Producto" vacío.</div>
                 </div>
 
               </div>
@@ -102,29 +103,29 @@
                 <div class="col-md-4 mb-3">
                   <label for="txtAlto">Alto en Pulgadas (in) *</label>
                   <input type="text" class="form-control" id="txtAlto" name="txtAlto" placeholder="19.685" value=""
-                    required>
+                  pattern="[0-9]{1,2}" title="Solo puede ingresar números" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Calle" vacío.</div>
+                  <div class="invalid-feedback">No deje el campo "Alto" vacío.</div>
                 </div>
 
                 <div class="col-md-4 mb-3">
                   <label for="txtAncho">Ancho en Pulgadas (in) *</label>
                   <input type="text" class="form-control" id="txtAncho" name="txtAncho" placeholder="27.5591" value=""
-                    required>
+                  pattern="[0-9]{1,2}" title="Solo puede ingresar números" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Colonia" vacío.</div>
+                  <div class="invalid-feedback">No deje el campo "Ancho" vacío.</div>
                 </div>
 
 
                 <div class="col-md-4 mb-3">
                   <label for="txtLargo">Largo en Pulgadas (in) *</label>
                   <input type="text" class="form-control" id="txtLargo" name="txtLargo" placeholder="39.3701" value=""
-                    required>
+                  pattern="[0-9]{1,2}" title="Solo puede ingresar números" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Número Exterior" vacío.</div>
+                  <div class="invalid-feedback">No deje el campo "Largo" vacío.</div>
                 </div>
 
               </div>
@@ -138,7 +139,7 @@
                     placeholder="Laptop DELL, Play Station 5, iPhone 12 Pro Max, Surface, etc" value="" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Nombre(s)" vacío.</div>
+                  <div class="invalid-feedback">No deje el campo "Contenido" vacío.</div>
                 </div>
 
               </div>
@@ -146,12 +147,11 @@
               <div class="form-row">
 
                 <div class="col-md-12 mb-3">
-                  <label for="txtOrigen">Origen de Página Web *</label>
+                  <label for="txtOrigen">Origen de Página Web </label>
                   <input type="text" class="form-control" id="txtOrigen" name="txtOrigen"
-                    placeholder="Amazon, eBay, Target, etc" value="" required>
+                    placeholder="Amazon, eBay, Target, etc" value="" >
 
                   <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Nombre(s)" vacío.</div>
                 </div>
               </div>
 
@@ -172,12 +172,17 @@
                 </div>
 
                 <div class="col-md-8 mb-3">
-                  <label for="txtPorcentajeSeguro">10 % del Valor del Producto </label>
-                  <input type="text" class="form-control" id="txtPorcentajeSeguro" name="txtPorcentajeSeguro" placeholder="No se está incluyendo el seguro" value=""
-                    readonly>
+                  <label for="txtPorcentajeSeguro" id="porcentajeLabel" style="display:none;">10 % del Valor del Producto </label>
+                  <input type="text" class="form-control" id="txtPorcentajeSeguro" name="txtPorcentajeSeguro" placeholder="El mínimo valor para asegurar tu producto es de 100 dlls" value=""
+                  style="display:none;" required>
 
-                  <div class="valid-feedback">¡Ok válido!</div>
-                  <div class="invalid-feedback">No deje el campo "Apellido(s)" vacío.</div>
+                    <div class="valid-feedback">¡Ok válido!</div>
+                  <div class="invalid-feedback">No se puedes asegurar su producto si no tiene un valor mínimo de 100 dlls.</div>
+  
+                    <p class="text-danger" style="display:none;" id="labelSeguro">El mínimo valor para asegurar es de 100 DLLS.</p>
+
+                    <h6 id="labelCotizacion" style="display:none;"> <b> </b></h6>
+
                 </div>
 
               </div>
@@ -190,6 +195,8 @@
 
 
               <button type="submit" class="btn btn-success">Guardar</button>
+
+              
             </form>
           </div>
         </div>

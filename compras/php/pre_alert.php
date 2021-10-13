@@ -21,7 +21,7 @@ if(isset($_POST['txtPeso']) && isset($_POST['txtvalor']) && isset($_POST['txtAlt
        $obj_cliente = $resultado_cliente_prealerta->fetch_object();
        $id_cliente = $obj_cliente->id;   
         
-       if($seguro != "No se está incluyendo el seguro")
+       if($seguro != 0)
        {
            $resultado_seguro = ($valor * 10) / 100;
            $seguro = 1;

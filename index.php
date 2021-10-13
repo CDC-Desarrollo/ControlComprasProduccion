@@ -164,19 +164,20 @@
                             <form class="" method="POST" action="compras/php/registrar.php">
                                 <div class="register-form register">
                                     <input type="text" class="register-input name-input" id="Nombre" name="nombre"
-                                        placeholder="  Nombre(s) *">
+                                        placeholder="  Nombre(s) *" required>
+
 
                                     <input type="email" class="register-input name-email" id="exampleInputEmail1"
-                                        name="email" placeholder="  Correo Electrónico *">
+                                        name="email" placeholder="  Correo Electrónico *" required>
 
                                     <input type="password" class="register-input password-input"
-                                        id="exampleInputPassword1" name="pass" placeholder="  Contraseña *">
+                                        id="exampleInputPassword1" name="pass" id="pass" placeholder="  Contraseña *" required>
 
                                     <input type="password" class="register-input password-input"
-                                        id="exampleInputPassword2" name="pass2" placeholder="  Confirmar Contraseña *">
+                                        id="exampleInputPassword2" name="pass2" id="pass2" placeholder="  Confirmar Contraseña *" required>
                                 </div>
 
-                                <input value="Registrarme" class="register-submit" type="submit">
+                                <input id="registrar" value="Registrarme" class="register-submit" type="submit">
                             </form>
                             <!--end register form -->
 
