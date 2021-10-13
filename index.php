@@ -82,7 +82,7 @@
 
                         <li><a href="#contact">Contáctanos</a></li>
 
-                        <li class="discover-link"> <a href="" onclick="location.href='compras/login'" class="discover-btn">Ingresar</a></li>
+                        <li class="discover-link"> <a href="" onclick="location.href='compras/login.php'" class="discover-btn">Ingresar</a></li>
 
                     </ul>
                     <!--end navbar-nav -->
