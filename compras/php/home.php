@@ -7,6 +7,11 @@
 
         $email_sesion = $_SESSION['email'];
         
+        if (!isset($_SESSION['email'])) {
+            //header('location: login.php');
+            header("Location: login.php");
+        }
+
         $result = $conexion->query(" select * from usuarios where email='$email_sesion' ");
         $obj = $result->fetch_object();
         $confirmar_datos_usuario = $obj->confirmar_datos;

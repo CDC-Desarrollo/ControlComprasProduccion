@@ -1,6 +1,10 @@
 <?php
     include "php/conexion.php";
 
+    if (!isset($_SESSION['email'])) {
+      header("Location: login.php");
+    }
+
     $id_usuario_prealerta = $_POST['txtIdUsuarioHidden'];
     //echo $id_usuario_prealerta;
 
@@ -12,11 +16,7 @@
     $nombre_completo = $nombre_cliente . " " . $apellido_cliente;
     //echo $id_cliente;
 
-    $result_prealertas_cliente = $conexion->query("select * from prealertas where id_cliente ='$id_cliente'");
-    
-
-
-  
+    $result_prealertas_cliente = $conexion->query("select * from prealertas where id_cliente ='$id_cliente'");  
 ?>
 
 
