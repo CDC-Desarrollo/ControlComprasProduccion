@@ -77,7 +77,7 @@
 
          //$conexion->query("update usuarios set confirmar_datos = 1 where email='$email_sesion'");
 
-         header('location: home.php');
+         header('location: ../home.php');
 
       }
 

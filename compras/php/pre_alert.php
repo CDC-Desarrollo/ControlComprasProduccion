@@ -82,7 +82,7 @@ if(isset($_POST['txtPeso']) && isset($_POST['txtvalor']) && isset($_POST['txtAlt
        echo "<p> $idUsuario </p>";
         */
 
-       header('location: home.php');
+       header('location: ../home.php');
     
    }
 ?>
