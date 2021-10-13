@@ -188,7 +188,7 @@ echo '
 
                 <div class="col-md-3 mb-3">
                   <label for="nombre">Calle *</label>
-                  <input type="text" class="form-control" id="txtCalle" name="txtCalle" placeholder="Aldama" value="'. $calle_cliente .'"
+                  <input type="text" class="form-control" id="txtCalle" name="txtCalle" placeholder="Mariano Matamoros" value="'. $calle_cliente .'"
                     required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
@@ -197,7 +197,7 @@ echo '
 
                 <div class="col-md-3 mb-3">
                   <label for="apellido">Colonia *</label>
-                  <input type="text" class="form-control" id="txtColonia" name="txtColonia" placeholder="Juárez"
+                  <input type="text" class="form-control" id="txtColonia" name="txtColonia" placeholder="Sector Centro"
                     value="'. $colonia_cliente .'" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
@@ -207,7 +207,7 @@ echo '
 
                 <div class="col-md-3 mb-3">
                   <label for="nombre">Número Exterior *</label>
-                  <input type="text" class="form-control" id="txtNumExterior" name="txtNumExterior" placeholder="2103"
+                  <input type="text" class="form-control" id="txtNumExterior" name="txtNumExterior" placeholder="1234"
                     value="'. $num_ext_cliente .'" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
@@ -228,7 +228,7 @@ echo '
                 <div class="col-md-12 mb-3">
                   <label for="nombre">Entre Calles *</label>
                   <input type="text" class="form-control" id="txtEntreCalles" name="txtEntreCalles"
-                    placeholder="Entre Lincoln y Venezuela" value="'. $entre_calles_cliente .'" required>
+                    placeholder="Entre calle Hidalgo y Belen" value="'. $entre_calles_cliente .'" required>
 
                   <div class="valid-feedback">¡Ok válido!</div>
                   <div class="invalid-feedback">No deje el campo "Nombre(s)" vacío.</div>
@@ -238,7 +238,6 @@ echo '
 
 
               <div class="form-row">
-
                 <div class="form-group col-md-4">
                   <label for="txtEstado"> Estado *</label>
                   <select name="txtEstado" id="txtEstado" class="form-control">
@@ -275,10 +274,8 @@ echo '
                     <option value="Veracruz">Veracruz</option>
                     <option value="Yucatán">Yucatán</option>
                     <option value="Zacatecas">Zacatecas</option>
-
                   </select>
                 </div>
-
 
                 <div class="col-md-6 mb-3">
                   <label for="apellido">Ciudad *</label>
@@ -305,7 +302,7 @@ echo '
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Referencias</label>
                 <textarea class="form-control" id="txtReferencias" name="txtReferencias" rows="2"
-                  placeholder="Bodega Verde con Letreros de Control de Carga, a una cuadra está un Oxxo y Farmacia Guadalajara, detrás de Paquetería FEDEX."
+                  placeholder="Casa verde de dos pisos."
                   required>'. $referencias_cliente .'</textarea>
 
                 <div class="valid-feedback">¡Ok válido!</div>
@@ -326,7 +323,7 @@ echo '
 
               <div class="col-md-3 mb-3">
                 <label for="txtCalle2" style="display:none;" id="lblCalle2" name="lblCalle2" >Calle *</label>
-                <input type="hidden" class="form-control" id="txtCalle2" name="txtCalle2" placeholder="Aldama" value="'. $calle_cliente2 .'">
+                <input type="hidden" class="form-control" id="txtCalle2" name="txtCalle2" placeholder="Mariano Matamoros" value="'. $calle_cliente2 .'">
 
                 <div class="valid-feedback">¡Ok válido!</div>
                 <div class="invalid-feedback">No deje el campo "Calle" vacío.</div>
@@ -334,7 +331,7 @@ echo '
 
               <div class="col-md-3 mb-3">
                 <label for="txtColonia2" style="display:none;" id="lblColonia2" name="lblColonia2" >Colonia *</label>
-                <input type="hidden" class="form-control" id="txtColonia2" name="txtColonia2" placeholder="Juárez" value="'. $colonia_cliente2 .'">
+                <input type="hidden" class="form-control" id="txtColonia2" name="txtColonia2" placeholder="Centro" value="'. $colonia_cliente2 .'">
 
                 <div class="valid-feedback">¡Ok válido!</div>
                 <div class="invalid-feedback">No deje el campo "Colonia" vacío.</div>
@@ -343,7 +340,7 @@ echo '
 
               <div class="col-md-3 mb-3">
                 <label for="txtNumExterior2" style="display:none;" id="lblNumExterior2" name="lblNumExterior2" >Número Exterior *</label>
-                <input type="hidden" class="form-control" id="txtNumExterior2" name="txtNumExterior2" placeholder="2103" value="'. $num_ext_cliente2 .'">
+                <input type="hidden" class="form-control" id="txtNumExterior2" name="txtNumExterior2" placeholder="1234" value="'. $num_ext_cliente2 .'">
 
                 <div class="valid-feedback">¡Ok válido!</div>
                 <div class="invalid-feedback">No deje el campo "Número Exterior" vacío.</div>
@@ -361,7 +358,7 @@ echo '
 
             <div class="col-md-12 mb-3">
               <label for="txtEntreCalles2" style="display:none;" id="lblEntreCalles2" name="lblEntreCalles2" >Entre Calles *</label>
-              <input type="hidden" class="form-control" id="txtEntreCalles2" name="txtEntreCalles2" placeholder="Entre Lincoln y Venezuela" value="' . $entre_calles_cliente2 . '">
+              <input type="hidden" class="form-control" id="txtEntreCalles2" name="txtEntreCalles2" placeholder="Entre calle Hidalgo y Belen" value="' . $entre_calles_cliente2 . '">
 
               <div class="valid-feedback">¡Ok válido!</div>
               <div class="invalid-feedback">No deje el campo "Nombre(s)" vacío.</div>
@@ -438,8 +435,7 @@ echo '
           <div class="form-group">
             <label for="txtReferencias2" style="display:none;" id="lblReferencias2" name="lblReferencias2" >Referencias</label>
             <textarea class="form-control" style="display:none;" id="txtReferencias2" name="txtReferencias2"  rows="2"
-              placeholder="Bodega Verde con Letreros de Control de Carga, a una cuadra está un Oxxo y Farmacia Guadalajara, detrás de Paquetería FEDEX."
-              >'.$referencias_cliente2.'</textarea>
+              placeholder="Casa verde de dos pisos.">'.$referencias_cliente2.'</textarea>
 
             <div class="valid-feedback">¡Ok válido!</div>
             <div class="invalid-feedback">No deje el campo "Referencias" vacío.</div>
@@ -455,17 +451,11 @@ echo '
           <div class=" text-success">
             <p class="card-text" id="lblDomicilioAux2" style="display:none;"> Datos de Domicilio Auxiliar (2)</p>
           </div>
-
-
-
-
-
-
           <div class="form-row" id="div10" style="display:none;">
 
           <div class="col-md-3 mb-3">
             <label for="txtCalle3" style="display:none;" id="lblCalle3" name="lblCalle3" >Calle *</label>
-            <input type="hidden" class="form-control" id="txtCalle3" name="txtCalle3" placeholder="Aldama" value="'. $calle_cliente3 .'">
+            <input type="hidden" class="form-control" id="txtCalle3" name="txtCalle3" placeholder="Mariano Matamoros" value="'. $calle_cliente3 .'">
 
             <div class="valid-feedback">¡Ok válido!</div>
             <div class="invalid-feedback">No deje el campo "Calle" vacío.</div>
@@ -473,7 +463,7 @@ echo '
 
           <div class="col-md-3 mb-3">
             <label for="txtColonia3" style="display:none;" id="lblColonia3" name="lblColonia3" >Colonia *</label>
-            <input type="hidden" class="form-control" id="txtColonia3" name="txtColonia3" placeholder="Juárez" value="' .$colonia_cliente3 . '">
+            <input type="hidden" class="form-control" id="txtColonia3" name="txtColonia3" placeholder="Centro" value="' .$colonia_cliente3 . '">
 
             <div class="valid-feedback">¡Ok válido!</div>
             <div class="invalid-feedback">No deje el campo "Colonia" vacío.</div>
@@ -482,7 +472,7 @@ echo '
 
           <div class="col-md-3 mb-3">
             <label for="txtNumExterior3" style="display:none;" id="lblNumExterior3" name="lblNumExterior3" >Número Exterior *</label>
-            <input type="hidden" class="form-control" id="txtNumExterior3" name="txtNumExterior3" placeholder="2103" value="'. $num_ext_cliente3 .'">
+            <input type="hidden" class="form-control" id="txtNumExterior3" name="txtNumExterior3" placeholder="1234" value="'. $num_ext_cliente3 .'">
 
             <div class="valid-feedback">¡Ok válido!</div>
             <div class="invalid-feedback">No deje el campo "Número Exterior" vacío.</div>
@@ -500,7 +490,7 @@ echo '
 
         <div class="col-md-12 mb-3">
           <label for="txtEntreCalles3" style="display:none;" id="lblEntreCalles3" name="lblEntreCalles3" >Entre Calles *</label>
-          <input type="hidden" class="form-control" id="txtEntreCalles3" name="txtEntreCalles3" placeholder="Entre Lincoln y Venezuela" value="'.$entre_calles_cliente3.'">
+          <input type="hidden" class="form-control" id="txtEntreCalles3" name="txtEntreCalles3" placeholder="Entre calle Hidalgo y Belen" value="'.$entre_calles_cliente3.'">
 
           <div class="valid-feedback">¡Ok válido!</div>
           <div class="invalid-feedback">No deje el campo "Nombre(s)" vacío.</div>
@@ -577,21 +567,12 @@ echo '
       <div class="form-group">
         <label for="txtReferencias3" style="display:none;" id="lblReferencias3" name="lblReferencias3" >Referencias</label>
         <textarea class="form-control" style="display:none;" id="txtReferencias3" name="txtReferencias3"  rows="2"
-          placeholder="Bodega Verde con Letreros de Control de Carga, a una cuadra está un Oxxo y Farmacia Guadalajara, detrás de Paquetería FEDEX."
+          placeholder="Casa verde de dos pisos con porton gris."
           >'.$referencias_cliente3.'</textarea>
 
         <div class="valid-feedback">¡Ok válido!</div>
         <div class="invalid-feedback">No deje el campo "Referencias" vacío.</div>
       </div>
-
-
-
-
-
-
-
-
-              
               <a href="javascript: history.go(-1)">
                 <button type="button" class="btn btn-outline-dark">Volver</button>
               </a>
