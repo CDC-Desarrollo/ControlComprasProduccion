@@ -20,12 +20,7 @@
         $confirmar_datos_usuario = $obj->confirmar_datos;
         $id_usuario = $obj->id;
 
-
         echo $confirmar_datos_usuario;
-
-
-
-
         echo '
                             <!DOCTYPE html>
                     <html lang="en">
