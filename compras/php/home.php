@@ -1,7 +1,5 @@
 <?php
     require_once("conexion.php");
-
-
         //Se crea sesión para posteriormente hacer búsquedas en BD
         session_start();
 
@@ -15,8 +13,6 @@
         $obj = $result->fetch_object();
         $confirmar_datos_usuario = $obj->confirmar_datos;
         $id_usuario = $obj->id;
-
-
 
         //Información General de Cliente
         $resultado = $conexion->query(" select * from clientes where id_usuario='$id_usuario' ");
@@ -36,19 +32,13 @@
         $referencias_obj_cliente = $obj_cliente->referencias;
         $numero_telefono_obj_cliente = $obj_cliente->telefono;
         $numero_aux_obj_cliente = $obj_cliente->telefono_auxiliar;
-
-
         echo $confirmar_datos_usuario;
-
-
-
-
-        echo '
-                            <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+/*         echo 
+        '<!DOCTYPE html>
+        <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <title>Login</title>
                         <!-- CSS only -->
@@ -101,12 +91,10 @@
                         </div>
         ';
 
-
-        if($confirmar_datos_usuario > 0)
+ */
+/*         if($confirmar_datos_usuario > 0)
         {
-            echo '
-      
-            ';
+            echo '';
             //Si la columna de Confirmar Datos Generales de Usuario es 1
 
             echo "Aún no se coloca la info del cliente";
@@ -121,11 +109,6 @@
                     <div class="container">
                     <div class="small-container3 center-block">
             ';
-
-            
-
-
-
             echo '
                     
                     
@@ -189,17 +172,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-                        
-                        
-                        
-                        ';
-
-
-                    
+        </div>';          
         }
-        
-
         else
         {
             //Si la columna de Confirmar Datos Generales de Usuario es 0
@@ -239,7 +213,7 @@
                     </div>
                     <div>
                     ';
-        }
+        } */
         
         
 
