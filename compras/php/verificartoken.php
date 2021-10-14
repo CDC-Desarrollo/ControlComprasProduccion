@@ -3,8 +3,7 @@
     $email =$_POST['email'];
     $token =$_POST['token'];
     $codigo =$_POST['codigo'];
-    $res=$conexion->query("select * from passwords where 
-        email='$email' and token='$token' and codigo=$codigo")or die($conexion->error);
+    $res=$conexion->query("select * from passwords where email='$email' and token='$token' and codigo=$codigo")or die($conexion->error);
     $correcto=false;
 
 
@@ -22,6 +21,13 @@
         $correcto=true;
     }else{
         $correcto=false;
+    }
+
+    if($correcto){
+        header("Location: ../verificartoken.php?email=".$email);
+    }
+    else{
+        header("Location: ../reset.php?email=".$email."&token=".$token."&error=true");
     }
 ?>
 <!-- <!DOCTYPE html>
@@ -63,7 +69,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html> -->
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,7 +116,7 @@
 
                     <div class="container-login100-form-btn">
                         <button type="submit" class="login100-form-btn">
-                            Restablecer
+                            Restablecer 
                         </button>
                     </div>
 
@@ -127,22 +133,18 @@
             </div>
         </div>
     </div>
-    <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
     <script src="vendor/bootstrap/js/popper.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
+
     <script src="vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
     <script src="vendor/tilt/tilt.jquery.min.js"></script>
     <script>
     $('.js-tilt').tilt({
         scale: 1.1
     })
     </script>
-    <!--===============================================================================================-->
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</html> -->
