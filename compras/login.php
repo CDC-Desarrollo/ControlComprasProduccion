@@ -50,7 +50,14 @@
                         <small id="passwordHelp" class="text-danger">
 							<center>¡Correo o contraseña incorrecta!</center> 
                         </small>
-                    </div>
+                    </div> 
+					<?php endif; ?>
+                    <?php if(isset($_GET['info']) && $_GET['info'] == 'true'): ?>
+                    <div class="wrap-input100 validate-input">
+                        <small id="passwordHelp" class="text-success">
+							<center>¡Contraseña cambiada correctamente!</center> 
+                        </small>
+                    </div> 
 					<?php endif; ?>
                     <div class="container-login100-form-btn">
                         <button type="submit" class="login100-form-btn">
