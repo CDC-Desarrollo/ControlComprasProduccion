@@ -11,8 +11,7 @@
         $conexion->query("update usuarios set confirmado = '1' where email = '$email' ");
 
         header("Location: ../login.php?inforegistro=true");
-/*         echo '
-        
+        /*echo '
         <!DOCTYPE html>
         <html lang="en">
             <head>
@@ -37,9 +36,9 @@
             </head>
             <body>
 
-    <!-- Navigation-->
-    <div>
-        <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
+            <!-- Navigation-->
+            <div>
+            <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="../index.php"> <img class="logo-navbar"
                         src="../assets/imagenes/logo/logo.png" alt="" srcset=""> </a>
@@ -73,7 +72,7 @@
                 </div>
             </div>
         </nav>
-    </div>
+        </div>
             <div class="row justify-content-md-center" style="margin-top:7%">
             <form class="col-3" method="POST" action="../php/login.php">
                 <h2>Iniciar Sesión</h2>
@@ -97,16 +96,15 @@
             </div>
             </form>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-</body>
-</html>'; */
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        </body>
+        </html>'; */
     }else{
-        echo '
-        
-        <!DOCTYPE html>
+        echo 
+        '<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -248,8 +246,6 @@
             <!-- JavaScript Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         </body>
-        </html>
-        
-        ';
+        </html>';
     }
 ?>
