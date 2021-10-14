@@ -114,14 +114,13 @@ require_once 'php/home.php'
         <div class="container">
             <div class="small-container3 center-block">
                 <div class="card text-dark bg-light mb-3">
-                    <div class="card-header">Datos Generales de (
-                    'echo $_SESSION['email']; 
+                    <div class="card-header">Datos Generales de <?php echo $email_sesion ?>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Llena tus Datos Generales!</h5>
                     <p class="card-text">Para poder hacer tus pre-alertas debes llenar primero tus datos generales. Haz clic en el siguiente botón para llenarlos.</p>
                     <div>
-                        <a href="../datos_generales.php"><button type="submit" class="btn btn-success">Llena tus Datos Generales</button></a> 
+                        <a href="datos_generales.php"><button type="submit" class="btn btn-success">Llena tus Datos Generales</button></a> 
                     </div>
                 </div>
             </div>
