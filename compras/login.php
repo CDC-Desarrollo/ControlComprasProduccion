@@ -59,6 +59,13 @@
                         </small>
                     </div> 
 					<?php endif; ?>
+                    <?php if(isset($_GET['inforegistro']) && $_GET['inforegistro'] == 'true'): ?>
+                    <div class="wrap-input100 validate-input">
+                        <small id="passwordHelp" class="text-success">
+							<center>¡Tú cuenta ha sido verificada, ya puedes iniciar sesión!</center> 
+                        </small>
+                    </div> 
+					<?php endif; ?>
                     <div class="container-login100-form-btn">
                         <button type="submit" class="login100-form-btn">
                             Iniciar Sesión
