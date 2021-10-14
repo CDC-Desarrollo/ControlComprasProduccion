@@ -23,9 +23,6 @@
     }else{
         $correcto=false;
     }
-   
-   
-
 ?>
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +86,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login">
-                <?php if($correcto){ ?>
+                <?php if($correcto){ ?> 
                 <form class="form validate-form" method="POST" action="./cambiarpassword.php">
                     <span class="login100-form-title">
                         Restablecer Contraseña
@@ -125,7 +122,7 @@
                 </form>
                 <?php }
                 else{ ?>
-                <div class="alert alert-danger">C��digo incorrecto o vencido</div>
+                <div class="alert alert-danger">Codigo incorrecto o vencido</div>
                 <?php } ?>
             </div>
         </div>
