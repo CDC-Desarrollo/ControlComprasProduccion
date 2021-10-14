@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="text-center p-t-12">
-                        <a class="txt2" href="https://www.controldecompras.com.mx/compras/restablecer.php">
+                        <a class="txt2" href="restablecer.php">
                             ¿Olvidó su contraseña?
                         </a>
                     </div>
