@@ -28,7 +28,7 @@ $mensaje = '
   <p>
     <a
     href="https://controldecompras.com.mx/compras/reset.php?email='.$email.'&token='.$token.'">
-    Para restablecer haz clic aqui en Entorno de Produccion</a>  
+    Para restablecer haz clic aqui</a>  
   </p>
 
 
