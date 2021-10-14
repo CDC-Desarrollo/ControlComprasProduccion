@@ -1,6 +1,9 @@
-
 <?php
-
+  session_start();
+  if (!isset($_SESSION['email'])) {
+    header("Location: login.php");
+    //header("Location: ../index.php");
+  }
 include "php/conexion.php";
 
 $id_usuario_hidden = $_POST['txtIdUsuarioHidden'];
