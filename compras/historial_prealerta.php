@@ -143,7 +143,7 @@
           <input type="hidden" id="txtIdUsuarioPrealerta" name="txtIdUsuarioPrealerta"
             value="<?php echo $id_usuario_prealerta ?>">
 
-          <a href="php/redireccion.php">
+          <a href="home.php">
             <button type="button" class="btn btn-outline-dark">Volver</button>
           </a>
 
