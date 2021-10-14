@@ -64,7 +64,7 @@ if( isset($_GET['email'])  && isset($_GET['token']) ){
 						<input class="input100" type="number" name="codigo" placeholder="Codigo">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fas fa-fingerprint" aria-hidden="true"></i>
+							<i class="fa fa-key" aria-hidden="true"></i>
 						</span>
                         <input type="hidden" class="form-control" id="c" name="email" value="<?php echo $email;?>">
                         <input type="hidden" class="form-control" id="c" name="token" value="<?php echo $token;?>">
