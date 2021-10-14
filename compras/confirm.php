@@ -7,14 +7,13 @@
     }
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verifiar Cuenta</title>
-    <!-- CSS only -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -34,9 +33,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-        <!-- Navigation-->
-        <div>
+    <div>
         <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="index.php"> <img class="logo-navbar"
@@ -72,7 +69,6 @@
             </div>
         </nav>
     </div>
-
     <div class="container">
         <div class="row justify-content-md-center" style="margin-top:15%">
             <form class="col-3" action="./php/verificar.php" method="POST">
@@ -88,7 +84,64 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Iniciar Sesión</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="icon" type="image/png" href="../../images/LOGOCOMPRAS.png">
+	<link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="login/css/main.css">
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login">
+				<form class="form validate-form" action="./php/verificar.php" method="POST">
+					<span class="login100-form-title">Verificar Cuenta</span>
+					<div class="wrap-input100 validate-input" data-validate = "Ingresa el codigo que enviamos por correo">
+                        <label for="">Ingresa el codigo que enviamos por correo</label>
+						<input class="input100" type="number" id="c" name="codigo" placeholder="Ingresa el Código">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100"><i class="fas fa-fingerprint" aria-hidden="true"></i></span>
+                        <input type="hidden" class="form-control" id="email" name="email" value="<?php echo $email;?>">
+                    </div>
+
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn"> Verificar </button>
+					</div>
+
+					<!-- <div class="text-center p-t-12">
+						<a class="txt2" href="https://controldecompras.com.mx/compras/login/">
+						Regresar al login
+						</a>
+					</div> -->
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 </body>
 </html>
