@@ -53,7 +53,7 @@
            
          values(2, '', '', '', '', '','', '', '', '', '$id_cliente'), (3, '', '', '', '', '','', '', '', '', '$id_cliente') ")or die($conexion->error);
 
-         header('location: home.php');
+         header('location: ../home.php');
 
       }
 
