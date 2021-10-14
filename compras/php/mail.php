@@ -16,19 +16,13 @@ $mensaje = '
     <meta charset="UTF-8">
 </head>
 <body>
-  
   <h2> Hola '. $name .', ya esta casi lista tu cuenta en Control de Compras.</h2>
-
   <p>Tu Codigo de Seguridad para Autenticarte en Control de Compras es:</p>
-
   <p>
     <a
     href="https://controldecompras.com.mx/compras/confirm.php?email='.$email.'">
-    Haz clic aqui para validar tu cuenta en Entorno de Producción</a>  
+    Haz clic aqui para validar tu cuenta</a>  
   </p>
-
-
-
   <h2> '. $codigo_auth .' </h2>
 </body>
 </html>
