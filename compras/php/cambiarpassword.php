@@ -6,11 +6,13 @@
     $p2 =$_POST['p2'];
     if($p1 == $p2){
         $p1=sha1($p1);
-        $conexion->query("update usuarios set password='$p1' where email='$email' ")or die($conexion->error);
-        echo '
+        $conexion->query("update usuarios set password='$p1' where email='$email' ")
+        or die($conexion->error);
         
+        header("Location: ../login.php?info=true");
+        /* echo '
         <!DOCTYPE html>
-<html lang="en">
+        <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,10 +83,9 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
-</html>
-
-        ';
+</html>'; */
     }else{
-        echo "no coinciden";
+        header("Location: ../verificartoken.php?email=".$email."&error=true");
+        //echo "no coinciden"; 
     }
 ?>
