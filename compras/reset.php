@@ -69,13 +69,16 @@ if( isset($_GET['email'])  && isset($_GET['token']) ){
                         <input type="hidden" class="form-control" id="c" name="email" value="<?php echo $email;?>">
                         <input type="hidden" class="form-control" id="c" name="token" value="<?php echo $token;?>">
 					</div>
-
+					<?php if(isset($_GET['error']) && $_GET['error'] == 'true'): ?>
+                    <div class="wrap-input100 validate-input">
+                        <small id="passwordHelp" class="text-danger">
+							<center>¡Código incorrecto o expirado!</center> 
+                        </small>
+                    </div>
+					<?php endif; ?>
 					<div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn">
-							Restablecer
-						</button>
+						<button type="submit" class="login100-form-btn">Restablecer</button>
 					</div>
-
 					<div class="text-center p-t-12">
 						<a class="txt2" href="https://controldecompras.com.mx/compras/login/">
 						Regresar al login
