@@ -123,6 +123,20 @@
                                     <div class="valid-feedback">¡Ok válido!</div>
                                 </div>
                             </div>
+
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="txtOrigen">Tracking </label>
+                                    <a href="#" class="fa fa-question-circle"
+                                    data-original-title="We will not share your information with anyone., but if you'd like to opt out of our email list, you can easily do so by 
+                                    following the instructions in any email you receive." 
+                                    data-placement="right" data-toggle="tooltip"></a>
+                                    <input type="text" class="form-control" id="txtOrigen" name="txtOrigen"
+                                        placeholder="Ingrese el tracking" value="">
+                                    <div class="valid-feedback">¡Ok válido!</div>
+                                </div>
+                            </div>
+<!--// cool stuff here -->
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
                                     <div class="form-check">
@@ -166,6 +180,9 @@
     <script src="assets/popper/popper.min.js"></script>
     <script src="assets/bootstrap4/js/bootstrap.min.js"></script>
     <script src="assets/codigo.js"></script>
+    <script>
+         $("a[data-toggle='tooltip']").tooltip();
+    </script>
 </body>
 
 </html>
