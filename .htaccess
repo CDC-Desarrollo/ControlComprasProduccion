@@ -1,0 +1,2 @@
+RewriteCond %{REQUEST_URI} ^/controldecompras/
+RewriteRule ^(.*)$ https://www.controldecompras.com.mx/$1 [R=301,L]
