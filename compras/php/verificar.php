@@ -2,14 +2,9 @@
     require_once("conexion.php");
     $email =$_POST['email'];
     $codigo =$_POST['codigo'];
-    $res = $conexion->query("select * from usuarios 
-        where email='$email' 
-        and codigo='$codigo' 
-        ")or die($conexion->error);
+    $res = $conexion->query("select * from usuarios where email='$email' and codigo='$codigo' ")or die($conexion->error);
     if( mysqli_num_rows($res) > 0 ){
-        echo "TODO CORRECTO";
         $conexion->query("update usuarios set confirmado = '1' where email = '$email' ");
-
         header("Location: ../login.php?inforegistro=true");
         /*echo '
         <!DOCTYPE html>
@@ -103,7 +98,8 @@
         </body>
         </html>'; */
     }else{
-        echo 
+        header("Location: ../confirm.php?email=".$email."&error=true");
+/*         echo 
         '<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -246,6 +242,6 @@
             <!-- JavaScript Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         </body>
-        </html>';
+        </html>'; */
     }
 ?>

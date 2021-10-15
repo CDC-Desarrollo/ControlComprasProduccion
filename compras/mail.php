@@ -29,9 +29,12 @@ $mensaje = '
 
   <p>
     <a
-    //href="http://localhost/confirm.php?email='.$email.'">
+    //href="http://localhost/FinalControlDeCompras1/compras/confirm.php?email='.$email.'">
     Haz clic aqui para validar tu cuenta en Entorno de Testing</a>  
   </p>
+
+
+
 
   <h2> '. $codigo_auth .' </h2>
 </body>

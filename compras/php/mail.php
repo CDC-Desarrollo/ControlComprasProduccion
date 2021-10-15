@@ -23,17 +23,14 @@ $mensaje = '
     href="https://controldecompras.com.mx/compras/confirm.php?email='.$email.'">
     Haz clic aqui para validar tu cuenta</a>  
   </p>
-  <h2> '. $codigo_auth .' </h2>
-
 
   <p>
   <a
-  href="http://localhost:3000/FinalControlDeCompras1/compras/confirm.php?email='.$email.'">
-  Haz clic aqui para validar tu cuenta en Entorno de Testing</a>  
+  href="  http://localhost:3000/compras/confirm.php?email='.$email.'">
+  Haz clic aqui para validar tu cuenta en local</a>  
 </p>
-  <h2> '. $codigo_auth .' </h2>
 
-  
+  <h2> '. $codigo_auth .' </h2>
 </body>
 </html>
 ';

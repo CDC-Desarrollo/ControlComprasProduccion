@@ -166,6 +166,7 @@
                                     <input type="text" class="register-input name-input" id="Nombre" name="nombre"
                                         placeholder="  Nombre(s) *" required>
 
+
                                     <input type="email" class="register-input name-email" id="exampleInputEmail1"
                                         name="email" placeholder="  Correo Electrónico *" required>
 

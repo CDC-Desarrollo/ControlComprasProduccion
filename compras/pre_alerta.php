@@ -15,12 +15,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="../images/LOGOCOMPRAS.png">
     <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.min.css">
-    <title>Creación de Pre-Alerta</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <title>Historial de Pre-Alertas</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -29,7 +27,7 @@
         <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger"
-                    href="https://www.controldecompras.com.mx/compras/php/home.php"> <img class="logo-navbar"
+                    href="home.php"> <img class="logo-navbar"
                         src="assets/imagenes/logo/logo.png" alt="" srcset=""> </a>
                 <button
                     class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded"
@@ -125,6 +123,20 @@
                                     <div class="valid-feedback">¡Ok válido!</div>
                                 </div>
                             </div>
+
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="txtOrigen">Tracking </label>
+                                    <a href="#" class="fa fa-question-circle"
+                                    data-original-title="We will not share your information with anyone., but if you'd like to opt out of our email list, you can easily do so by 
+                                    following the instructions in any email you receive." 
+                                    data-placement="right" data-toggle="tooltip"></a>
+                                    <input type="text" class="form-control" id="txtOrigen" name="txtOrigen"
+                                        placeholder="Ingrese el tracking" value="">
+                                    <div class="valid-feedback">¡Ok válido!</div>
+                                </div>
+                            </div>
+<!--// cool stuff here -->
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
                                     <div class="form-check">
@@ -168,6 +180,9 @@
     <script src="assets/popper/popper.min.js"></script>
     <script src="assets/bootstrap4/js/bootstrap.min.js"></script>
     <script src="assets/codigo.js"></script>
+    <script>
+         $("a[data-toggle='tooltip']").tooltip();
+    </script>
 </body>
 
 </html>

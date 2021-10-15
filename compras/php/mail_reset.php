@@ -31,13 +31,6 @@ $mensaje = '
     Para restablecer haz clic aqui</a>  
   </p>
 
-  <p>
-  <a
-  href="http://localhost:3000/FinalControlDeCompras1/compras/reset.php?email='.$email.'&token='.$token.'">
-  Haz clic aqui para validar tu cuenta en Entorno de Testing</a>  
-</p>
-
-
 
 </body>
 </html>
@@ -98,7 +91,7 @@ if(mail($para, $título, $mensaje, $cabeceras)){
         <div>
             <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
                 <div class="container">
-                    <a class="navbar-brand js-scroll-trigger" href="../index.php"> <img class="logo-navbar"
+                    <a class="navbar-brand js-scroll-trigger" href="../../index.php"> <img class="logo-navbar"
                             src="../assets/imagenes/logo/logo.png" alt="" srcset=""> </a>
                     <button
                         class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded"
@@ -114,18 +107,7 @@ if(mail($para, $título, $mensaje, $cabeceras)){
                                     <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                                 </a>
                             </li>
-    
-                            <li class="nav-item mx-0 mx-lg-1 color_enlace">
-                                <a href="../register.php">
-                                    <i class="fa fa-user-plus"></i> Regístrate
-                                </a>
-                            </li>
-    
-                            <li class="nav-item mx-0 mx-lg-1 color_enlace">
-                                <a href="">
-                                    <i class="fas fa-dollar-sign"></i> Cotiza
-                                </a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>

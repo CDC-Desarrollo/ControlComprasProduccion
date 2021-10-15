@@ -29,13 +29,6 @@ Version: 1.0
 /* ========================================================== */
 /* 			               01. GENERAL LAYOUT                 */
 /* ========================================================== */
-.ocultar {
-    display: none;
-}
- 
-.mostrar {
-    display: block;
-}
 
 #tituloCotizador{
 	font-family: 'Nanum Gothic', sans-serif;

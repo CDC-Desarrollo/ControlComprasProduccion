@@ -1,3 +1,19 @@
+document.getElementById("registrar").addEventListener("click", function( event ) {
+    // presentar la cuenta de clicks realizados sobre el elemento con id "prueba"
+    let p1 = document.getElementById("pass").value;
+    let p2 = document.getElementById("pass2").value;
+
+    if(p1 != p2)
+    {
+        alert("No son iguales");
+    }
+    else
+    {
+        alert("cdk");
+    }
+    
+  }, false);
+
 function cotizacion() {
     let peso = document.getElementById('txtPeso').value;
     let total = 45;

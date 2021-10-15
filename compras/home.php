@@ -8,9 +8,9 @@ require_once 'php/home.php'
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="../images/LOGOCOMPRAS.png">
     <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.min.css">
-    <title>Creación de Pre-Alerta</title>
+    <title>Home - Control de Compras</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,7 +20,7 @@ require_once 'php/home.php'
         <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger"
-                    href="https://www.controldecompras.com.mx/compras/php/home.php"> <img class="logo-navbar"
+                    href="home.php"> <img class="logo-navbar"
                         src="assets/imagenes/logo/logo.png" alt="" srcset=""> </a>
                 <button
                     class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded"
@@ -126,4 +126,9 @@ require_once 'php/home.php'
             </div>
         </div>
         <div>
+    
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/bootstrap4/js/bootstrap.min.js"></script>
+    <script src="assets/codigo.js"></script>
     <?php endif ?>
