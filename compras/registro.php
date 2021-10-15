@@ -26,7 +26,7 @@
                         <input class="input100" type="text" id="Nombre" name="nombre" placeholder="Nombre">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
                     <div class="wrap-input100 validate-input"
@@ -60,7 +60,7 @@
                     </div>
 					<?php endif; ?>
 					<div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn">Restablecer</button>
+						<button type="submit" class="login100-form-btn">Registrar</button>
 					</div>
 					<div class="text-center p-t-12">
 						<a class="txt2" href="https://controldecompras.com.mx/compras/login/">

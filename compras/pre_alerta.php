@@ -15,12 +15,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="../images/LOGOCOMPRAS.png">
     <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.min.css">
-    <title>Creación de Pre-Alerta</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <title>Historial de Pre-Alertas</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -29,7 +27,7 @@
         <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger"
-                    href="https://www.controldecompras.com.mx/compras/php/home.php"> <img class="logo-navbar"
+                    href="home.php"> <img class="logo-navbar"
                         src="assets/imagenes/logo/logo.png" alt="" srcset=""> </a>
                 <button
                     class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded"

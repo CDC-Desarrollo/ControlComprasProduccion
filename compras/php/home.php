@@ -35,7 +35,6 @@
             $numero_telefono_obj_cliente = $obj_cliente->telefono;
             $numero_aux_obj_cliente = $obj_cliente->telefono_auxiliar;
         }
-        echo $confirmar_datos_usuario;
 /*         echo 
         '<!DOCTYPE html>
         <html lang="en">

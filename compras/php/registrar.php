@@ -18,5 +18,4 @@
             header("Location: ../registro.php?error=true");
         }
     }
-
 ?>

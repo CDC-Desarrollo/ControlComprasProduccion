@@ -88,7 +88,7 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 	<title>Iniciar Sesión</title>
@@ -107,7 +107,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login">
-				<form class="form validate-form" action="./php/verificar.php" method="POST">
+				<form class="form validate-form" action="./php/verificar.php" method="POST"> 
 					<span class="login100-form-title">Verificar Cuenta</span>
                     <p>Ingresa el codigo que enviamos por correo</p>
 					<div class="wrap-input100 validate-input" data-validate = "Ingresa el codigo que enviamos por correo">
@@ -116,6 +116,13 @@
 						<span class="symbol-input100"><i class="fa fa-key" aria-hidden="true"></i></span>
                         <input type="hidden" class="form-control" id="email" name="email" value="<?php echo $email;?>">
                     </div>
+                    <?php if(isset($_GET['error']) && $_GET['error'] == 'true'): ?>
+                    <div class="wrap-input100 validate-input">
+                        <small id="passwordHelp" class="text-danger">
+							<center>¡El Código Ingresado es Invalido o ya está expirado!</center> 
+                        </small>
+                    </div> 
+					<?php endif; ?>
 
 					<div class="container-login100-form-btn">
 						<button type="submit" class="login100-form-btn"> Verificar </button>

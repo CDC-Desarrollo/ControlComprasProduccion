@@ -19,7 +19,7 @@
     <div>
       <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="../index.php"> <img class="logo-navbar"
+                <a class="navbar-brand js-scroll-trigger" href="home.php"> <img class="logo-navbar"
                         src="assets/imagenes/logo/logo.png" alt="" srcset=""> </a>
                 <button
                     class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded"
