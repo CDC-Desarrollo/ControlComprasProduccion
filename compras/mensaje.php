@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="#" />
+    <link rel="icon" type="image/png" href="../../images/LOGOCOMPRAS.png">
     <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.min.css">
-    <title>Creación de Pre-Alerta</title>
+    <title>Instrucciones de Confirmación</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto text-white">
                     <li class="nav-item mx-0 mx-lg-1 ">
-                            <a href="../login.php">
+                            <a href="login.php">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                             </a>
                         </li>
