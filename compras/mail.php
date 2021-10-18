@@ -30,7 +30,7 @@ $mensaje = '
   <p>
     <a
     //href="http://localhost/FinalControlDeCompras1/compras/confirm.php?email='.$email.'">
-    Haz clic aqui para validar tu cuenta en Entorno de Testing</a>  
+    Haz clic aqui para validar tu cuenta local</a>  
   </p>
 
 

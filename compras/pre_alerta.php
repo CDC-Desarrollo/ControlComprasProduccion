@@ -128,15 +128,14 @@
                                 <div class="col-md-12 mb-3">
                                     <label for="txtOrigen">Tracking </label>
                                     <a href="#" class="fa fa-question-circle"
-                                    data-original-title="We will not share your information with anyone., but if you'd like to opt out of our email list, you can easily do so by 
-                                    following the instructions in any email you receive." 
-                                    data-placement="right" data-toggle="tooltip"></a>
-                                    <input type="text" class="form-control" id="txtOrigen" name="txtOrigen"
+                                    data-original-title="Si usted ya cuenta con el (Tracking / Guía / Núm. de Seguimiento que le proporciona su paquetería, favor de ingresarlo." 
+                                    data-placement="left" data-toggle="tooltip"></a>
+                                    <input type="text" class="form-control" id="txtTracking" name="txtTracking"
                                         placeholder="Ingrese el tracking" value="">
                                     <div class="valid-feedback">¡Ok válido!</div>
                                 </div>
                             </div>
-<!--// cool stuff here -->
+                            <!--// cool stuff here -->
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
                                     <div class="form-check">

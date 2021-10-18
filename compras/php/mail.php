@@ -26,7 +26,7 @@ $mensaje = '
 
   <p>
   <a
-  href="  http://localhost:3000/compras/confirm.php?email='.$email.'">
+  href="  http://localhost:3000/FinalControlDeCompras1/compras/confirm.php?email='.$email.'">
   Haz clic aqui para validar tu cuenta en local</a>  
 </p>
 
