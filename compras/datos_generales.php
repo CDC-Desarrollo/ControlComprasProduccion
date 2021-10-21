@@ -77,8 +77,8 @@
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="nombre">Teléfono *</label>
-                                    <input type="tel" class="form-control" id="txtTelefono" name="txtTelefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        placeholder="867-306-7845" value="" required>
+                                    <input type="tel" class="form-control" id="txtTelefono" name="txtTelefono" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                                        placeholder="8673067845" oninput="agregarCaracter(this.value)" value="" required>
 
                                     <div class="valid-feedback">¡Ok válido!</div>
                                     <div class="invalid-feedback">No deje el campo "Teléfono" vacío.</div>
@@ -87,7 +87,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="apellido">Teléfono Secundario</label>
                                     <input type="text" class="form-control" id="txtTelefonoAuxiliar"
-                                        name="txtTelefonoAuxiliar" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="867-306-7845" value="">
+                                        name="txtTelefonoAuxiliar" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="8673067845" value="">
                                 </div>
 
                             </div>

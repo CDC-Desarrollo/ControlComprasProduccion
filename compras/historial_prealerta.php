@@ -56,19 +56,20 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="card border-success p-3 mb-5 bg-white ">
+                <div class="card border-success p-3 mb-3 bg-white ">
                     <h5 class="card-header"> Pre-Alerta(s) de <?php echo $nombre_completo?></h5>
                     <div class="card text-dark bg-light mb-3 ">
                         <div class="row">
                             <div class="col">
                                 <div class="card-body text-justify">
 
-                                    <table class="table table-bordered text-center">
+                                    <table class="table table-bordered table-responsive-sm text-center">
                                         <thead>
                                             <tr>
                                                 <th scope="col">ID</th>
                                                 <th scope="col">Fecha</th>
                                                 <th scope="col">Contenido</th>
+                                                <th scope="col">Tracking</th>
                                                 <th scope="col">Status</th>
                                             </tr>
                                         </thead>
@@ -86,6 +87,7 @@
                                                 <th scope="row"> <?php echo $obj_prealerta->id ?> </th>
                                                 <td> <?php echo $obj_prealerta->fecha_hora ?> </td>
                                                 <td> <?php echo $obj_prealerta->contenido ?> </td>
+                                                <td> <?php echo $obj_prealerta->tracking ?> </td>
                                                 <?php if($obj_prealerta->status == 0) {?>
                                                 <td> Pendiente </td>
                                                 <?php } ?>
