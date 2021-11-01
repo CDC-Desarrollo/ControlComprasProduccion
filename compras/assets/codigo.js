@@ -78,25 +78,14 @@ function calcularPorcentajeSeguro() {
   }
 }
 
-const agregarCaracter = (cadena) => {
-  let cadenaConCaracteres = "";
-  let caracter = "-";
-  let pasos = 3;
-  let contador = 0;
+function fileUpload()
+{
+  var fileInput = document.getElementById("exampleFormControlFile1");
+  var fileStatus = document.querySelector(".file-status");
 
-  const longitudCadena = cadena.length;
-  for (let i = 0; i < longitudCadena; i += pasos) {
-      if (i + pasos < longitudCadena && contador <2) {
-          cadenaConCaracteres += cadena.substring(i, i + pasos) + caracter;
-          contador++;
-      } else {
-          cadenaConCaracteres += cadena.substring(i, longitudCadena);
-          //console.log(cadenaConCaracteres.pop());
-      }
-  }
-  
+  fileInput.addEventListener("change", function(){
 
-  console.log(cadenaConCaracteres);
+  });
 }
 
 

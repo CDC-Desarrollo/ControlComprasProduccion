@@ -71,6 +71,8 @@
                                                 <th scope="col">Contenido</th>
                                                 <th scope="col">Tracking</th>
                                                 <th scope="col">Status</th>
+                                                <th scope="col"> Cobro </th>
+                                                <th scope="col">Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -97,6 +99,12 @@
                                                 <?php if($obj_prealerta->status == 2) {?>
                                                 <td> Retenido </td>
                                                 <?php } ?>
+                                                <td> $ <?php echo $obj_prealerta->status ?>  </td>
+                                                    <form action="prealerta_detalle.php" method="post">    
+                                                        <input type="hidden" class="form-control" id="txtIdPrealertaHidden"
+                                                        name="txtIdPrealertaHidden" placeholder="" value="<?php echo $obj_prealerta->id ?>" required>
+                                                        <td> <button type="submit" class="btn btn-dark"> Ver Pre-Alerta</button>  </td>
+                                                    </form>
                                             </tr>
                                             <?php } ?>
                                         </tbody>
@@ -119,5 +127,6 @@
     <script src="assets/popper/popper.min.js"></script>
     <script src="assets/bootstrap4/js/bootstrap.min.js"></script>
     <script src="assets/codigo.js"></script>
+
 </body>
 </html>
