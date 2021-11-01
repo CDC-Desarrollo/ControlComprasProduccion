@@ -22,7 +22,7 @@ if(isset($_POST['txtIdPrealertaHidden'])){
     $porcentaje_seguro = $obj -> largo;
     $tracking = $obj -> tracking;
 
-
+    $status = $obj -> status;
 }
 
 ?>
