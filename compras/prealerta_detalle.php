@@ -1,5 +1,6 @@
 <?php
 require_once 'php/prealert_details.php';
+    session_start();
 
 ?>
 |

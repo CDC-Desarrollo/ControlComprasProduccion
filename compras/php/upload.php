@@ -1,5 +1,5 @@
 <?php
-require_once 'conexion.php';
+   include "./conexion.php";
 
 if(isset($_FILES["exampleFormControlFile1"]))
 {
@@ -22,8 +22,25 @@ if(isset($_FILES["exampleFormControlFile1"]))
     $ruta_tmp = "uploads/". $file_name;
 
     //dirname(dirname(__FILE__)). "\uploads". "/" . $file_name ."<br />";
-    echo $ruta_tmp;
-    $conexion->query("insert into comprobantes(ruta, idPrealerta) values ('$ruta_tmp','$id') ");
+    
+    
+    
+    $res = $conexion->query("select * from comprobantes where idPrealerta='$id'");
+  
+
+    echo $res->num_rows;
+    
+    if( mysqli_num_rows($res) > 0 ){
+        unlink("uploads/". $file_name);
+        header("Location: ../prealerta_detalle.php");
+    }
+    else
+    {
+        $conexion->query("insert into comprobantes(ruta, idPrealerta) values ('$ruta_tmp','$id') ");
+    }
+
+    //echo $ruta_tmp;
+    
 
 
 
