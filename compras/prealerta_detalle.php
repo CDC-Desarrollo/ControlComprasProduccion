@@ -1,9 +1,8 @@
 <?php
 require_once 'php/prealert_details.php';
-    session_start();
 
 ?>
-|
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,9 +76,9 @@ require_once 'php/prealert_details.php';
                             </p>
                         
                             <?php if($status == 5): ?>
-                            
+                                <?php include_once "php/imagen.php" ?>
                                 <img src="<?php echo $ruta_tmp; ?>" alt="nada" srcset="" width="60" height="40">
-                                <?php include_once "php/" ?>
+                                
 
                             <?php endif ?>
 

@@ -20,19 +20,22 @@ if(isset($_FILES["exampleFormControlFile1"]))
 
 
     $ruta_tmp = "uploads/". $file_name;
-
-    //dirname(dirname(__FILE__)). "\uploads". "/" . $file_name ."<br />";
-    
-    
     
     $res = $conexion->query("select * from comprobantes where idPrealerta='$id'");
+    $obj = $res->fetch_object();
   
 
-    echo $res->num_rows;
+    //echo $res->num_rows;
     
     if( mysqli_num_rows($res) > 0 ){
-        unlink("uploads/". $file_name);
-        header("Location: ../prealerta_detalle.php");
+
+        //unlink($ruta_tmp);
+       // echo $id . "<br>";
+       $imagen_eliminar = $obj->ruta;
+        //echo $obj->ruta . "<br>";
+        unlink($imagen_eliminar);
+        $conexion->query("UPDATE comprobantes SET ruta='$ruta_tmp' WHERE idPrealerta='$id' ");
+        //header("Location: ../home.php");
     }
     else
     {
@@ -45,12 +48,6 @@ if(isset($_FILES["exampleFormControlFile1"]))
 
 
     $file_type = $file["type"];
-    //ruta donde se guardará
-   // $file["tmp_name"] = "C:/xampp/htdocs/VSC PHP/FinalControlDeCompras1/images";
-    //C:/xampp/htdocs/VSC PHP/FinalControlDeCompras1/images
-
-    //var_dump($file);
-    //die();
 
     $allowed_type = array("image/jpg", "image/jpeg", "image/png");
 
@@ -85,6 +82,6 @@ else
     <title>Document</title>
 </head>
 <body>
-<img src="<?php echo $ruta_tmp; ?>" alt="nada" srcset="" width="150" height="150">
+    <img src="<?php echo $ruta_tmp; ?>" alt="nada" srcset="" width="150" height="150">
 </body>
 </html>
