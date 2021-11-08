@@ -41,7 +41,7 @@ require_once 'php/prealert_details.php';
     </div>
 
     <div class="container">
-        <div class="small-container3 center-block">
+        <div class="small-container center-block">
             <div class="card text-dark bg-light mb-3 ">
                 <div class="card-header">
 
@@ -77,7 +77,8 @@ require_once 'php/prealert_details.php';
                         
                             <?php if($status == 5): ?>
                                 <?php include_once "php/imagen.php" ?>
-                                <img src="<?php echo $ruta_tmp; ?>" alt="nada" srcset="" width="60" height="40">
+                                <img src="<?php echo "php/" . $ruta_tmp; ?>" alt="nada" srcset="" width="60" height="40">
+                                <p> <?php echo "php/" . $ruta_tmp; ?> </p>
                                 
 
                             <?php endif ?>

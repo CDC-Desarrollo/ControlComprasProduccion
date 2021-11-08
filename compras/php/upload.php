@@ -27,25 +27,33 @@ if(isset($_FILES["exampleFormControlFile1"]))
 
     //echo $res->num_rows;
     
-    if( mysqli_num_rows($res) > 0 ){
-
-        //unlink($ruta_tmp);
-       // echo $id . "<br>";
-       $imagen_eliminar = $obj->ruta;
-        //echo $obj->ruta . "<br>";
-        unlink($imagen_eliminar);
-        $conexion->query("UPDATE comprobantes SET ruta='$ruta_tmp' WHERE idPrealerta='$id' ");
-        //header("Location: ../home.php");
+    $size = $_FILES["exampleFormControlFile1"]["size"];
+    
+    if($size <= 0 || $size >= 300000)
+    {
+        // header("Location: ../home.php");
+        header("location:javascript://history.go(-1)");
     }
     else
     {
-        $conexion->query("insert into comprobantes(ruta, idPrealerta) values ('$ruta_tmp','$id') ");
-    }
+        if( mysqli_num_rows($res) > 0 ){
+        
 
-    //echo $ruta_tmp;
+            $imagen_eliminar = $obj->ruta;
+            //echo $obj->ruta . "<br>";
+            unlink($imagen_eliminar);
+            
     
-
-
+            $conexion->query("UPDATE comprobantes SET ruta='$ruta_tmp' WHERE idPrealerta='$id' ");
+            echo $size;
+            header("Location: ../home.php");
+        }
+        else
+        {
+            $conexion->query("insert into comprobantes(ruta, idPrealerta) values ('$ruta_tmp','$id') ");
+            header("Location: ../home.php");
+        }
+    }
 
     $file_type = $file["type"];
 
@@ -53,7 +61,7 @@ if(isset($_FILES["exampleFormControlFile1"]))
 
     if(in_array($file_type, $allowed_type))
     {
-        //header("Location:../prealerta_detalle");
+        header("location:javascript://history.go(-1)"); 
     }
 
     //Crear directorio
@@ -63,12 +71,10 @@ if(isset($_FILES["exampleFormControlFile1"]))
     }
 
     move_uploaded_file($file["tmp_name"], "uploads/". $file_name);
-
-    //Mover imagen a directorio
 }
 else
 {
-    //header("Location: ../prealerta_detalle");
+    //header("Location: ../prealerta_detalle.php");
 }
 
 ?>
