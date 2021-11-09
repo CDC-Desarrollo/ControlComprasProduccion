@@ -44,7 +44,7 @@ function calcularPorcentajeSeguro() {
         document.getElementById("txtPorcentajeSeguro").style.display = "block";
       }
       else {
-        //Si es manor
+        //Si es menor
         document.getElementById("txtPorcentajeSeguro").readOnly = false;
         //
         txtPorcentajeSeguro.value = "";

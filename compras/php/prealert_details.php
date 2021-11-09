@@ -16,7 +16,7 @@ if(isset($_POST['txtIdPrealertaHidden'])){
     $ancho = $obj -> ancho;
 
     $valor = $obj -> valor;
-    $contenido = $obj -> id;
+    $contenido = $obj -> contenido;
     $origen = $obj -> peso;
     $seguro = $obj -> alto;
     $porcentaje_seguro = $obj -> largo;

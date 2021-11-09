@@ -15,44 +15,61 @@ if(isset($_FILES["exampleFormControlFile1"]))
 
     $extension_archivo = substr($file_name,$posicion, strlen($file_name));
 
-    $file["name"] = "prealerta_" . $id . $extension_archivo;
+    
+    $DateAndTime = date('m-d-Y h-i-s');  
+    //echo "The current date and time are $DateAndTime.";
+
+    $file["name"] = "prealerta_". $DateAndTime . "_" . $id . $extension_archivo;
     $file_name  = $file["name"]; 
 
 
     $ruta_tmp = "uploads/". $file_name;
+
+    //echo $ruta_tmp  . "<br>";
     
     $res = $conexion->query("select * from comprobantes where idPrealerta='$id'");
     $obj = $res->fetch_object();
   
 
     //echo $res->num_rows;
-    
     $size = $_FILES["exampleFormControlFile1"]["size"];
-    
-    if($size <= 0 || $size >= 300000)
-    {
-        // header("Location: ../home.php");
-        header("location:javascript://history.go(-1)");
-    }
-    else
-    {
-        if( mysqli_num_rows($res) > 0 ){
+    if( mysqli_num_rows($res) > 0 ){
         
-
-            $imagen_eliminar = $obj->ruta;
-            //echo $obj->ruta . "<br>";
-            unlink($imagen_eliminar);
+        
+        if($size <= 0 )
+        {
+            //header("Location: ../home.php");
             
-    
-            $conexion->query("UPDATE comprobantes SET ruta='$ruta_tmp' WHERE idPrealerta='$id' ");
-            echo $size;
-            header("Location: ../home.php");
+           header("location:javascript://history.go(-1)");
         }
         else
         {
-            $conexion->query("insert into comprobantes(ruta, idPrealerta) values ('$ruta_tmp','$id') ");
-            header("Location: ../home.php");
+                    $imagen_eliminar = $obj->ruta;
+        //echo $obj->ruta . "<br>";
+        unlink($imagen_eliminar);
+        
+
+        $conexion->query("UPDATE comprobantes SET ruta='$ruta_tmp' WHERE idPrealerta='$id' ");
+        
+        //echo $size;
+        header("Location: ../home.php");
         }
+
+
+    }
+    else
+    {
+        if($size <= 0 )
+        {
+            //header("Location: ../home.php");
+           header("location:javascript://history.go(-1)");
+        }   
+        else
+        {
+        $conexion->query("insert into comprobantes(ruta, idPrealerta) values ('$ruta_tmp','$id') ");
+        header("Location: ../home.php");            
+        }
+
     }
 
     $file_type = $file["type"];
@@ -61,7 +78,7 @@ if(isset($_FILES["exampleFormControlFile1"]))
 
     if(in_array($file_type, $allowed_type))
     {
-        header("location:javascript://history.go(-1)"); 
+        //header("Location: ../home.php");
     }
 
     //Crear directorio
@@ -79,15 +96,3 @@ else
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <img src="<?php echo $ruta_tmp; ?>" alt="nada" srcset="" width="150" height="150">
-</body>
-</html>

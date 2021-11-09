@@ -39,13 +39,12 @@ require_once 'php/prealert_details.php';
         </div>
         </nav>
     </div>
-
+    <br> <br> <br> <br>
+                    
     <div class="container">
         <div class="small-container center-block">
             <div class="card text-dark bg-light mb-3 ">
                 <div class="card-header">
-
-
                     <div class="col">
                         <!-- Datos del usuario logeado -->
                         <div class="card-body">
@@ -65,8 +64,8 @@ require_once 'php/prealert_details.php';
                                 <?php echo $ancho ?>
                             </p>
                             <p class="card-text">
-                                <b> Valor del Producto </b>:
-                                <?php echo $valor ?>
+                                <b> Valor del Producto </b>: $
+                                <?php echo $valor ?> DLLS
                             </p>
                             <p class="card-text">
                                 <b> Contenido del Producto </b>:
