@@ -21,8 +21,24 @@ if(isset($_POST['txtIdPrealertaHidden'])){
     $seguro = $obj -> alto;
     $porcentaje_seguro = $obj -> largo;
     $tracking = $obj -> tracking;
+    $fechahora = $obj -> fecha_hora;
+    $timeStamp = date( "d/m/Y h:i A", strtotime($fechahora));
+
+
+    if($tracking == "")
+    {
+        $tracking = "No tiene.";
+    }
+    
 
     $status = $obj -> status;
+
+    $result_comprobantes = $conexion->query(" select * from comprobantes where idPrealerta='$id' ");
+    $comprobante = $result_comprobantes->fetch_object();
+
+    $ruta = "php/";
+    $ruta = $ruta . $comprobante -> ruta;
+
 }
 
 ?>

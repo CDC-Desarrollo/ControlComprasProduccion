@@ -18,6 +18,10 @@ require_once 'php/prealert_details.php';
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/css/chocolat.css" type="text/css" media="screen" >
+        <script type="text/javascript" src="assets/js/chocolat.js"></script>
+
+        
 </head>
 
 <body>
@@ -46,7 +50,7 @@ require_once 'php/prealert_details.php';
 
 
         <div class="card text-dark bg-light mb-3 ">
-            <div class="card-header text-center"> <b><i>Detalle de la Pre-Alerta: </i></b> # <?php echo $idPrealerta ?> </div>
+            <div class="card-header text-center"> <b><i>Detalle de la Pre-Alerta: </i></b> # <?php echo $idPrealerta ?> (<?php echo $timeStamp ?>) </div>
     
             <div class="row">
                 <div class="col">
@@ -54,9 +58,11 @@ require_once 'php/prealert_details.php';
 
                         <h5 class="card-title"> Dimensiones del Paquete:  </h5>
                         <ul> 
-                            <li> Alto: <?php echo $alto ?> lbs. </li> 
-                            <li> Largo: <?php echo $largo ?> lbs. </li> 
+                            
                             <li> Ancho: <?php echo $ancho ?> lbs. </li> 
+                            <li> Largo: <?php echo $largo ?> lbs. </li> 
+                            <li> Alto: <?php echo $alto ?> lbs. </li> 
+                            
                         </ul>
                         <p class="card-text"> <b> Valor del Producto </b>: $<?php echo $valor ?> dlls. <b>  </b> 
 
@@ -83,6 +89,41 @@ require_once 'php/prealert_details.php';
                     </div>
                 </div>
 
+                <div class="col">
+
+                    <div class="container-fluid h-100">
+                        <div class="col-12 text-center"> 
+                            <h4>Comprobante de Pago:</h4>
+                            <div class="chocolat-parent">
+
+                                <?php if (mysqli_num_rows($result_comprobantes) > 0): ?>
+
+                                    <a href="<?php echo $ruta ?> " class="chocolat-image" title="Comprobante de Pago Actual">
+                                        <div data-crop-image="150">
+                                            <img alt="image" src="<?php echo $ruta ?> " width="150px" class="img-fluid">
+                                        </div>
+                                    </a>
+                                
+                                <?php else: ?>
+                                
+                                    <div class="jumbotron jumbotron-fluid">
+                                        <div class="container">
+                                            <h5 class="display-4"> Falta Adjuntar Comprobante de Pago </h5>
+                                        </div>
+                                        </div>
+
+                                <?php endif ?>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </div>
 
@@ -91,9 +132,29 @@ require_once 'php/prealert_details.php';
     <div>
 
 
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'))
+        })
+
+    </script>
 </body>
 
+
 </html>
+
+
+
+
+
+
+
+
+
 
 
 
