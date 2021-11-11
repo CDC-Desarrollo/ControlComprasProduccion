@@ -34,25 +34,21 @@ if(isset($_FILES["exampleFormControlFile1"]))
     //echo $res->num_rows;
     $size = $_FILES["exampleFormControlFile1"]["size"];
     if( mysqli_num_rows($res) > 0 ){
-        
-        
+
         if($size <= 0 )
-        {
-            //header("Location: ../home.php");
-            
+        {           
            header("location:javascript://history.go(-1)");
         }
         else
         {
-                    $imagen_eliminar = $obj->ruta;
-        //echo $obj->ruta . "<br>";
-        unlink($imagen_eliminar);
+            $imagen_eliminar = $obj->ruta;
+            unlink($imagen_eliminar);
         
 
-        $conexion->query("UPDATE comprobantes SET ruta='$ruta_tmp' WHERE idPrealerta='$id' ");
-        
-        //echo $size;
-        header("Location: ../home.php");
+            $conexion->query("UPDATE comprobantes SET ruta='$ruta_tmp' WHERE idPrealerta='$id' ");
+
+
+            header("Location: ../home.php");
         }
 
 
@@ -67,6 +63,7 @@ if(isset($_FILES["exampleFormControlFile1"]))
         else
         {
         $conexion->query("insert into comprobantes(ruta, idPrealerta) values ('$ruta_tmp','$id') ");
+        $conexion->query("update prealertas SET status=5 WHERE id='$id' ");
         header("Location: ../home.php");            
         }
 

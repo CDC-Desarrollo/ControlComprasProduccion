@@ -86,8 +86,11 @@
                                                 <?php if($obj_prealerta->status == 2) {?>
                                             <tr class="table-warning">
                                                 <?php } ?>
+                                                <?php if($obj_prealerta->status == 5) {?>
+                                            <tr class="table-info">
+                                                <?php } ?>
                                                 <th scope="row"> <?php echo $obj_prealerta->id ?> </th>
-                                                <td> <?php echo $obj_prealerta->fecha_hora ?> </td>
+                                                <td> <?php echo date( "d-m-Y", strtotime($obj_prealerta->fecha_hora))?> </td>
                                                 <td> <?php echo $obj_prealerta->contenido ?> </td>
                                                 <td> <?php echo $obj_prealerta->tracking ?> </td>
                                                 <?php if($obj_prealerta->status == 0) {?>
@@ -98,6 +101,9 @@
                                                 <?php } ?>
                                                 <?php if($obj_prealerta->status == 2) {?>
                                                 <td> Retenido </td>
+                                                <?php } ?>
+                                                <?php if($obj_prealerta->status == 5) {?>
+                                                <td> Comprobante Adjuntado </td>
                                                 <?php } ?>
                                                 <td> $ <?php echo $obj_prealerta->status ?>  </td>
                                                     <form action="prealerta_detalle.php" method="post">    
