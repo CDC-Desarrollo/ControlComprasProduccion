@@ -50,7 +50,7 @@ require_once 'php/prealert_details.php';
 
 
         <div class="card text-dark bg-light mb-3 ">
-            <div class="card-header text-center"> <b><i>Detalle de la Pre-Alerta: </i></b> # <?php echo $idPrealerta ?> (<?php echo $timeStamp ?>) </div>
+            <div class="card-header text-center"> <b><i>Detalle de la Pre-Alerta: </i></b> # <?php echo $idPrealerta ?> <br>  <b><i>Fecha y Hora: </i></b>(<?php echo $timeStamp ?>) </div>
     
             <div class="row">
                 <div class="col">
@@ -142,6 +142,7 @@ require_once 'php/prealert_details.php';
         })
 
     </script>
+    
 </body>
 
 

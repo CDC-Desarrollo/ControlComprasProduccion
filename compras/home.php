@@ -46,8 +46,14 @@ require_once 'php/home.php'
         <div class="small-container3 center-block">
             <div class="card text-dark bg-light mb-3 ">
                 <div class="card-header text-center"> 
-                    <b><i>Datos del Generales de: </i></b> <?php echo $email_sesion ?>
-                    <b><i>Núm. Casillero:</i></b> CDC<?php echo $id_usuario ?></div>
+                    <b><i>Datos del Generales de: </i></b> <?php echo $nombre_completo ?> <br>
+                    
+                    <a href="#" class="fa fa-question-circle"
+                        data-original-title="Este es el número de identificación de tu casillero virtual." 
+                        data-placement="left" data-toggle="tooltip">
+                    </a>
+
+                    <b><i>Núm. Casillero:</i></b> CDC<?php echo $id_usuario ?></div> 
                     <div class="row">
                         <div class="col">
                             <!-- Datos del usuario logeado -->
@@ -81,7 +87,17 @@ require_once 'php/home.php'
                                 <input type="hidden" class="form-control" id="txtIdUsuarioHidden"
                                     name="txtIdUsuarioHidden" placeholder="" value="<?php echo $id_usuario ?>" required>
                                 <br> <br>
-                                <p class="card-text"> <b><i>Dirección de tu Casillero Virtual:</i></b> 1119 Santa Isabel Ave, Laredo, TX 78040, EE. UU. </p>
+
+                                
+
+
+                                <p class="card-text">
+                                <a href="#" class="fa fa-question-circle"
+                                    data-original-title="Esta es la dirección que debe ingresar al momento de realizar una compra." 
+                                    data-placement="left" data-toggle="tooltip">
+                                </a>
+                                     <b><i>Dirección de tu Casillero Virtual:</i></b> 1119 Santa Isabel Ave, Laredo, TX 78040, EE. UU. 
+                                </p>
                                 <button type="submit" class="btn btn-success">Editar Información General</button>
                             </form>
                         </div>
@@ -127,8 +143,16 @@ require_once 'php/home.php'
         </div>
         <div>
     
+
+    <?php endif ?>
+
     <script src="assets/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/popper/popper.min.js"></script>
     <script src="assets/bootstrap4/js/bootstrap.min.js"></script>
     <script src="assets/codigo.js"></script>
-    <?php endif ?>
+    <script>
+         $("a[data-toggle='tooltip']").tooltip();
+    </script>
+</body>
+
+</html>
