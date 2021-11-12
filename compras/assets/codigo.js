@@ -25,7 +25,7 @@ function calcularPorcentajeSeguro() {
   var txtPorcentajeSeguro = document.getElementById("txtPorcentajeSeguro");
   var chkSeguro = document.getElementById('exampleCheck1').checked;
 
-  var porcentajeSeguro = 10;
+  var porcentajeSeguro = 5;
   var resultadoPorcentajeSeguro = (txtValor * porcentajeSeguro) / 100;
 
   if (chkSeguro) {
