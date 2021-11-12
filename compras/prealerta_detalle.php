@@ -64,11 +64,13 @@ require_once 'php/prealert_details.php';
                             <li> Alto: <?php echo $alto ?> lbs. </li> 
                             
                         </ul>
+                        
+                        <p class="card-text"> <b> Peso del Producto </b>: <?php echo $peso ?> lb. <b>  </b> 
                         <p class="card-text"> <b> Valor del Producto </b>: $<?php echo $valor ?> dlls. <b>  </b> 
 
                         </p>
 
-                        <p class="card-text"> <b> Contenido del Paquete </b>: <?php echo $contenido ?> . </p>
+                        <p class="card-text"> <b> Contenido del Paquete </b>: <?php echo $contenido ?></p>
                         
                         <input type="hidden" class="form-control" id="txtIdUsuarioHidden" name="txtIdUsuarioHidden"
                         placeholder="" value="'.$id_usuario.'" required>
