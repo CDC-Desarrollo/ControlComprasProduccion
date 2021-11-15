@@ -1,15 +1,14 @@
 <?php
 
-  include "php/conexion.php";
+  //include "php/conexion.php";
   session_start();
   if (!isset($_SESSION['email'])) {
     header("Location: login.php");
-    //header("Location: ../index.php");
   }
+
+  require_once 'php/pre_alert_address.php';
   
   $id_usuario_prealerta = $_POST['txtIdUsuarioHidden'];
-  //echo $id_usuario_prealerta;
-
 
 ?>
 
@@ -126,10 +125,40 @@
                             </div>
                             <div class="form-row">
                                 <div class="col-md-12 mb-3">
+
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-5 mb-3">
                                     <label for="txtOrigen">Origen de Página Web </label>
-                                    <input type="text" class="form-control" id="txtOrigen" name="txtOrigen"
-                                        placeholder="Amazon, eBay, Target, etc" value="">
+                                        <input type="text" class="form-control" id="txtOrigen" name="txtOrigen"
+                                            placeholder="Amazon, eBay, Target, etc" value="">
+                                        <div class="valid-feedback">¡Ok válido!</div>
+                                </div>
+                                
+                                <div class="col-md-7 mb-3">
+                                    <label for="txtvalor">Seleccione un domicilio *</label>
+                                    <a href="#" class="fa fa-question-circle"
+                                    data-original-title="Aquí, usted puede seleccionar si su paquete llegará a su dirección principal o alguno de los domicilios auxiliares." 
+                                    data-placement="left" data-toggle="tooltip"></a>
+
+                                    <select class="custom-select" name="selDomicilio">
+                                        <option selected value="0"> <?php echo $dir1 ?> </option>
+                                        <?php if($blnDomicilio2) :?>
+                                            <option value="1"> <?php echo $dir2 ?> </option>
+                                        <?php endif ?>
+
+                                        <?php if ($blnDomicilio3): ?>
+                                            <option value="2"> <?php echo $dir3 ?> </option>
+                                        <?php endif ?>
+                                        
+                                        
+                                    </select>
+
                                     <div class="valid-feedback">¡Ok válido!</div>
+                                    <div class="invalid-feedback">No deje el campo "Valor del Producto" vacío.</div>
+
                                 </div>
                             </div>
 
