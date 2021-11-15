@@ -92,6 +92,7 @@ require_once 'php/prealert_details.php';
                         
                         
                         <p class="card-text"> <b><i>Tracking del Paquete:</i></b> <?php echo $tracking ?> </p>
+                        <p class="card-text"> <b><i>Dirección Destino del Paquete:</i></b> <?php echo $domicilio ?> </p>
               
                         <form action="php/upload.php" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
@@ -146,10 +147,6 @@ require_once 'php/prealert_details.php';
 
 
     <div>
-
-
-
-
 
     <script>
 
