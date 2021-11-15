@@ -1,5 +1,19 @@
 <?php
+  
+  header('Cache-Control: no cache'); //no cache
+  session_cache_limiter('private_no_expire'); // works
+  session_start();
+
+  if (!isset($_SESSION['email'])) {
+    header("Location: login.php");
+    //header("Location: ../index.php");
+  }
+  
+
+
 require_once 'php/prealert_details.php';
+
+
 
 ?>
 

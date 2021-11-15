@@ -36,8 +36,14 @@ if(isset($_POST['txtIdPrealertaHidden'])){
     $result_comprobantes = $conexion->query(" select * from comprobantes where idPrealerta='$id' ");
     $comprobante = $result_comprobantes->fetch_object();
 
-    $ruta = "php/";
-    $ruta = $ruta . $comprobante -> ruta;
+    if(mysqli_num_rows($result_comprobantes) > 0)
+    {
+        $ruta = "php/";
+    $comprobantetmp = $comprobante -> ruta;
+    $ruta = $ruta . $comprobantetmp;
+    }
+
+    
 
 }
 

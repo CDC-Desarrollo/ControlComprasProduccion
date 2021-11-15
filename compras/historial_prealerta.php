@@ -1,22 +1,40 @@
 <?php
     include "php/conexion.php";
+
+    header('Cache-Control: no cache'); //no cache
+    session_cache_limiter('private_no_expire'); // works
     session_start();
     if (!isset($_SESSION['email'])) {
       header("Location: login.php");
     }
 
-    $id_usuario_prealerta = $_POST['txtIdUsuarioHidden'];
+    
+
+    $email_sesion = $_SESSION['email'];
+
+    $id_user = $conexion->query("select id from usuarios where email ='$email_sesion'");
+    $obj_user = $id_user->fetch_object();
+
+    $id_client = $conexion->query("select id from clientes where id_usuario ='$obj_user->id'");
+    $obj_client = $id_client->fetch_object();
+
+
+
+    //$id_usuario_prealerta = $_POST['txtIdUsuarioHidden'];
     //echo $id_usuario_prealerta;
 
-    $result_cliente = $conexion->query("select * from clientes where id_usuario='$id_usuario_prealerta'");
+    
+    $result_cliente = $conexion->query("select * from clientes where id_usuario='$obj_user->id'");
     $obj_cliente = $result_cliente->fetch_object();
     $id_cliente = $obj_cliente->id;
     $nombre_cliente = $obj_cliente->nombres;
     $apellido_cliente = $obj_cliente->apellidos;
     $nombre_completo = $nombre_cliente . " " . $apellido_cliente;
     //echo $id_cliente;
-
+    
     $result_prealertas_cliente = $conexion->query("select * from prealertas where id_cliente ='$id_cliente'");  
+    
+    $result_prealertas_cliente = $conexion->query("select * from prealertas where id_cliente ='$obj_client->id'");  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +75,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card border-success p-3 mb-3 bg-white ">
-                    <h5 class="card-header"> Pre-Alerta(s) de <?php echo $nombre_completo?></h5>
+                                       <h5 class="card-header"> Pre-Alerta(s) de <?php echo $nombre_completo?></h5> 
+
                     <div class="card text-dark bg-light mb-3 ">
                         <div class="row">
                             <div class="col">
