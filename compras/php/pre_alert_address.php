@@ -3,9 +3,9 @@
 require_once("conexion.php");
 
 if(isset($_POST['txtIdUsuarioHidden'])){
-    //$id_usuario = $_POST['txtIdUsuarioHidden'];
+    $id_usuario = $_POST['txtIdUsuarioHidden'];
     //echo $id;
-    $id_usuario = 93;
+    //$id_usuario = 93;
     
     $result = $conexion->query(" select id,calle, numero_exterior,colonia, estado, ciudad, codigo_postal from clientes where id_usuario='$id_usuario' ");
     $obj = $result->fetch_object();
